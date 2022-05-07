@@ -18,5 +18,15 @@ $(() => {
             }
         }
     }
-
+    var swiper = new Swiper('.swiper', {
+        speed: 2000,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
 });
