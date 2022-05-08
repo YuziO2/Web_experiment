@@ -11,8 +11,8 @@ $(() => {
         if (Object.hasOwnProperty.call(menulevel2, key)) {
             const element = menulevel2[key];
             $("header .menu .menu" + key).append("<ul></ul>");
-            $("header .menu .menu" + key).mouseenter(function () { $(this).find("ul").stop().slideDown(500); });//绑定事件，鼠标悬停展开
-            $("header .menu .menu" + key).mouseleave(function () { $(this).find("ul").stop().slideUp(500); });//鼠标离开升起
+            // $("header .menu .menu" + key).mouseenter(function () { $(this).find("ul").stop().slideDown(500); });//绑定事件，鼠标悬停展开
+            // $("header .menu .menu" + key).mouseleave(function () { $(this).find("ul").stop().slideUp(500); });//鼠标离开升起
             for (let j = 0; j < element.length; j++) {
                 $("header .menu .menu" + key + " ul").append("<li>" + element[j] + "</li>");
             }

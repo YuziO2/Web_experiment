@@ -26,25 +26,38 @@ header .menu {
 }
 
 .menu div {
-    width: 100px;
-    margin: 15px;
+    width: 130px;
+    padding-top: 15px;
     margin-left: 70px;
     margin-right: 70px;
     text-align: center;
-    background-color: bisque;
+    /* background-color: bisque; */
+    border-radius: 5px;
+}
+
+.menu div:hover>ul {
+    opacity: 1;
+    transform: scale(1);
+
 }
 
 .menu ul {
-    display: none;
+    opacity: 0;
     list-style: none;
     background-color: antiquewhite;
     border-radius: 5px;
+    margin-top: 10px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .menu ul li {
     /* font-size: large; */
-    margin: 10px;
+    padding: 10px;
     z-index: 514;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 
