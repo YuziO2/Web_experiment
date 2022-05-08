@@ -42,8 +42,9 @@ header .menu {
 
 
 .swiper {
-    width: 60%;
-    height: 100%;
+    width: 70%;
+    height: 600px;
+    margin-top: 70px;
 }
 
 .swiper-wrapper {
@@ -72,5 +73,6 @@ header .menu {
 }
 
 .swiper-slide img {
-    width: 50%;
+    width: 100%;
+    object-fit: cover;
 }

@@ -19,7 +19,7 @@ $(() => {
         }
     }
     var swiper = new Swiper('.swiper', {
-        speed: 2000,
+        speed: 1000,
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -27,6 +27,11 @@ $(() => {
         },
         pagination: {
             el: ".swiper-pagination",
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
     });
 });
