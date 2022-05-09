@@ -69,3 +69,13 @@ button {
     position: absolute;
     bottom: 40px;
 }
+
+#back {
+    width: 25%;
+    left: 120px;
+}
+
+#refresh {
+    width: 25%;
+    right: 120px;
+}

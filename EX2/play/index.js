@@ -46,7 +46,8 @@ $("#submit").on("click", () => {
         $("#head").text("答题结果：");
         $("#head").animate({ "font-size": 45 }, 1000);
         $("ul,#submit").hide(1000);
-        $("#refresh").show();
+        $("#refresh").show(1000);
+        $("#back").show(1000);
         let wrongQuestion = [];
         for (let i = 0; i <= currentAnswer.length - 1; i++) {
             currentAnswer[i] == userAnswer[i] ? null : wrongQuestion.push(i + 1);//wrongQuestion中存的是题号！

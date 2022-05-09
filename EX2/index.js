@@ -1,11 +1,12 @@
 $(() => {
-    let menulevel1 = ["时间长河", "长廊一角", "人物掠影", "关于我们"];
+    let menulevel1 = ["时间长河", "长廊一角", "人物掠影", "党史答题"];
     for (const key in menulevel1) {
         if (Object.hasOwnProperty.call(menulevel1, key)) {
             const element = menulevel1[key];
             $("header .menu").append($("<div class=\"menu" + key + "\"></div>").append("<span class=\"menulevel1\">" + element + "</span>"));
         }
     }
+    $("header .menu .menu" + (menulevel1.length - 1) + " span").html("<a href=\"./play.html\">" + menulevel1[menulevel1.length - 1] + "</a>");
     let menulevel2 = [["黎明前夜", "燎原星火", "曲折前行", "谱写新章"], ["占位符", "占位符", "占位符"], ["占位符", "占位符", "占位符"], []];
     for (const key in menulevel2) {
         if (Object.hasOwnProperty.call(menulevel2, key)) {
