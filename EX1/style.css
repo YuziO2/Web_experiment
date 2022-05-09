@@ -33,6 +33,7 @@ header .menu {
     text-align: center;
     /* background-color: bisque; */
     border-radius: 5px;
+    user-select: none;
 }
 
 .menu div:hover>ul {
@@ -51,6 +52,7 @@ header .menu {
     transform-origin: top;
     transition: all 0.5s;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    user-select: none;
 }
 
 .menu ul li {
