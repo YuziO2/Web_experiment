@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    width: 100%;
+    height: 250px;
+    background-color: rgb(208, 46, 46);
+    background-image: url(./img/header.jpg);
+    background-size: cover;
+}
+
+#logo {
+    width: 360px;
+    height: 160px;
+    margin-left: 140px;
+    margin-top: 40px;
+}
+
+header .menu {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+}
+
+.menu div {
+    width: 130px;
+    padding-top: 15px;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+    /* background-color: bisque; */
+    border-radius: 5px;
+    user-select: none;
+}
+
+.menu div:hover>ul {
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+.menu ul {
+    opacity: 0;
+    list-style: none;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    margin-top: 10px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    position: relative;
+    z-index: 9999;
+}
+
+.menu ul li {
+    /* font-size: large; */
+    padding: 10px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.swiper {
+    width: 70%;
+    height: 600px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.swiper-wrapper {
+    /* 通过改变animation-timing-function 制作弹性切换效果 */
+    transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#intro {
+    margin-bottom: 70px;
+}
+
+#intro .header {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin: 70px;
+}
+
+#intro p {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-indent: 35px;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+
+    background-image: url(./img/footer.jpg);
+    background-size: cover;
+}
