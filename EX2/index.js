@@ -6,7 +6,8 @@ $(() => {
             $("header .menu").append($("<div class=\"menu" + key + "\"></div>").append("<span class=\"menulevel1\">" + element + "</span>"));
         }
     }
-    $("header .menu .menu" + (menulevel1.length - 1) + " span").html("<a href=\"./play.html\">" + menulevel1[menulevel1.length - 1] + "</a>");
+    $("header .menu .menu" + (menulevel1.length - 1)).css("padding-top", "5px");//调一下答题span的上内边距
+    $("header .menu .menu" + (menulevel1.length - 1) + " span").html("<button id=\"answer\" class=\"button button-glow button-border button-rounded button-caution\" onclick = \"window.location.href='./play.html'\" >" + menulevel1[menulevel1.length - 1] + "</button>");//放个按钮
     let menulevel2 = [["黎明前夜", "燎原星火", "曲折前行", "谱写新章"], ["占位符", "占位符", "占位符"], ["占位符", "占位符", "占位符"], []];
     for (const key in menulevel2) {
         if (Object.hasOwnProperty.call(menulevel2, key)) {

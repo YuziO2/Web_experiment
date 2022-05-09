@@ -131,3 +131,11 @@ footer {
     background-image: url(./img/footer.jpg);
     background-size: cover;
 }
+
+#answer {
+    width: 90px;
+    height: 40px;
+    padding: 0px;
+    letter-spacing: 2px;
+    text-align: center;
+}
