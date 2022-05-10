@@ -20,6 +20,23 @@ $(() => {
             }
         }
     }
+
+    $("#fontSizeSwitcher .fontSize:eq(0)").on("click", () => {//字体小
+        $("#sliding_block").animate({ "left": "2%" }, 500);
+        $("#intro h1").animate({ "font-size": "2em" }, 500);
+        $("#intro p").animate({ "font-size": "18px", "text-indent": "36px" }, 500);
+    })
+    $("#fontSizeSwitcher .fontSize:eq(1)").on("click", () => {//字体中
+        $("#sliding_block").animate({ "left": "35%" }, 500);
+        $("#intro h1").animate({ "font-size": "3em" }, 500);
+        $("#intro p").animate({ "font-size": "22px", "text-indent": "44px" }, 500);
+    })
+    $("#fontSizeSwitcher .fontSize:eq(2)").on("click", () => {//字体大
+        $("#sliding_block").animate({ "left": "68%" }, 500);
+        $("#intro h1").animate({ "font-size": "4em" }, 500);
+        $("#intro p").animate({ "font-size": "28px", "text-indent": "56px" }, 500);
+    })
+
     var swiper = new Swiper('.swiper', {
         speed: 1000,
         loop: true,

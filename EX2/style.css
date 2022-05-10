@@ -75,7 +75,7 @@ header .menu {
     margin-top: 40px;
     width: 18%;
     height: 40px;
-    background-color: grey;
+    background-color: rgba(200, 197, 197, 0.7);
     border-radius: 5px;
     display: flex;
 }
@@ -141,17 +141,18 @@ header .menu {
     margin-bottom: 70px;
 }
 
-#intro .header {
+#intro h1 {
     display: block;
     text-align: center;
-    font-size: 40px;
-    margin: 70px;
+    /* font-size: 40px; */
+    margin: 50px;
 }
 
 #intro p {
     margin-left: 15%;
     margin-right: 15%;
-    text-indent: 35px;
+    text-indent: 36px;
+    font-size: 18px;
 }
 
 footer {
