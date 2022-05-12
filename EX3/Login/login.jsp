@@ -23,15 +23,25 @@
         <img src="../img/GZHU.png" alt="">
         <span>登录 广州大学党史红色长廊</span>
     </header>
+    <%
+    /**
+    * 判断request域中是否有错误信息：（第一次进入登录页面的时候，没有错误信息）
+    * * 如果有错误信息：显示错误信息
+    */
+    String msg = "";
+    if(request.getAttribute("msg") != null){
+        // 有错误信息：显示错误信息:
+        msg = (String)request.getAttribute("msg");
+    }
+    %>
     <div id="loginframe">
-        <%-- <span>欢迎登陆</span> --%>
-        <form action="">
+        <form action="logincheck.jsp" method="POST">
             <div>
-                <input class="gate" id="username" type="text" placeholder="Enter username:" />
+                <input class="gate" id="username" name="username" type="text" placeholder="Enter username:" />
                 <label for="username">用户名</label>
             </div>
             <div>
-                <input class="gate" id="password" type="password" placeholder="Enter password,more than 8 characters:" />
+                <input class="gate" id="password" name="password" type="password" placeholder="Enter password,more than 8 characters:" />
                 <label for="password">密码</label>
             </div>
             <input type="submit" id="login" class="button button-glow button-border button-rounded button-caution" value="登 录">
