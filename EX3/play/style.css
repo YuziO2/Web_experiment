@@ -1,0 +1,81 @@
+body {
+    background-image: url('./Background.jpeg');
+    background-size: cover;
+}
+
+#center {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: azure;
+    border-radius: 20px;
+    box-shadow: 0px, 0px, 15px, red;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+
+#head {
+    font-size: 40px;
+    margin: 40px;
+}
+
+.loginimg img {
+    width: 150px;
+    height: 150px;
+    margin: 40px;
+}
+
+#question {
+    width: 700px;
+    height: 130px;
+    display: none;
+    font-size: 30px;
+}
+
+#result {
+    width: 700px;
+    height: 130px;
+    font-size: 25px;
+}
+
+ul {
+    width: 900px;
+    padding-left: 150px;
+    padding-top: 0px;
+    display: none;
+    list-style: none;
+}
+
+li {
+    /* display: inline; */
+    margin: 40px;
+    font-size: 25px;
+}
+
+label {
+    user-select: none;
+    /*用户不可选择 */
+}
+
+button {
+    width: 50%;
+    height: 40px;
+    position: absolute;
+    bottom: 40px;
+}
+
+#back {
+    width: 25%;
+    left: 120px;
+}
+
+#refresh {
+    width: 25%;
+    right: 120px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>永远跟党走</title>
+    <script src="./import/jquery-3.6.0.js"></script>
+    <script src="./play/index.js" defer></script>
+    <link rel="stylesheet" href="./play/style.css">
+    <link rel="stylesheet" href="./import/buttons.css">
+    <link rel="stylesheet" href="./import/icheck-material.css" />
+</head>
+
+<body>
+    <div id="center">
+        <span id="head">欢迎进入广大党史答题系统！</span>
+        <div class="loginimg">
+            <img src="./play/GZHU.png" alt="">
+            <img src="./play/Danghui.png" alt="">
+        </div>
+        <div id="question"></div>
+        <form>
+            <ul>
+                <li>
+                    <div class="icheck-material-deeporange">
+                        <input type="radio" name="select" id="radioA" value="A"><label for="radioA"></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="icheck-material-deeporange">
+                        <input type="radio" name="select" id="radioB" value="B"><label for="radioB"></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="icheck-material-deeporange">
+                        <input type="radio" name="select" id="radioC" value="C"><label for="radioC"></label>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        <button id="enter"
+            class="button button-glow button-border button-rounded button-caution">进&nbsp;&nbsp;入</button>
+        <button id="submit" type="submit" class="button button-glow button-border button-rounded button-caution"
+            style="display:none">提&nbsp;&nbsp;交</button>
+        <span>
+            <button id="refresh" class="button button-glow button-border button-rounded button-caution"
+                style="display:none" onclick="location.reload()">再&nbsp;&nbsp;次&nbsp;&nbsp;答&nbsp;&nbsp;题</button>
+            <button id="back" class="button button-glow button-border button-rounded button-caution"
+                style="display:none"
+                onclick="window.location.href='./display.html'">返&nbsp;&nbsp;回&nbsp;&nbsp;首&nbsp;&nbsp;页</button>
+        </span>
+    </div>
+</body>
+
+</html>
