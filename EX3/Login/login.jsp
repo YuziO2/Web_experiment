@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <img src="./img/GZHU.png" alt="">
+        <img src="../img/GZHU.png" alt="">
         <span>登录 广州大学党史红色长廊</span>
     </header>
     <div id="loginframe">
