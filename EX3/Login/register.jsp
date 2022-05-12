@@ -11,9 +11,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>红色长廊登陆</title>
+    <title>红色长廊注册</title>
     <link rel="stylesheet" href="input.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="../import/buttons.css">
     
 </head>
@@ -21,10 +21,9 @@
 <body>
     <header>
         <img src="../img/GZHU.png" alt="">
-        <span>登录 广州大学党史红色长廊</span>
+        <span>注册 广州大学党史红色长廊</span>
     </header>
     <div id="loginframe">
-        <%-- <span>欢迎登陆</span> --%>
         <form action="">
             <div>
                 <input class="gate" id="username" type="text" placeholder="Enter username:" />
@@ -34,10 +33,14 @@
                 <input class="gate" id="password" type="password" placeholder="Enter password,more than 8 characters:" />
                 <label for="password">密码</label>
             </div>
-            <input type="submit" id="login" class="button button-glow button-border button-rounded button-caution" value="登 录">
-            <div id="register">
-                <span>没有账号？点此</span>
-                <a href="./register.jsp">注册</a>
+            <div>
+                <input class="gate" id="Re_password" type="password" placeholder="Repeat password,the same as above:" />
+                <label for="password">重复密码</label>
+            </div>
+            <input type="submit" id="register" class="button button-glow button-border button-rounded button-caution" value="注 册">
+            <div id="login">
+                <span>已有账号？点此</span>
+                <a href="./login.jsp">登录</a>
             </div>
 
             
