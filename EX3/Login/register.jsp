@@ -55,7 +55,7 @@
     <div id="loginframe">
         <form action="registercheck.jsp" method="POST">
             <div>
-                <input class="gate" id="username" name="username" type="text" placeholder="Enter username:" required/>
+                <input class="gate" id="username" name="username" type="text" placeholder="Enter username:" required maxlength="10"/>
                 <label for="username">用户名</label>
             </div>
             <div>
