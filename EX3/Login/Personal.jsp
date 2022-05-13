@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人主页</title>
-    
+    <link rel="stylesheet" href="Personal.css">
     <script src="../import/jquery-3.6.0.js"></script>
     <script src="Personal.js"></script>
 </head>
@@ -32,8 +32,11 @@
         String username = new String((String)session.getAttribute("username"));
 
     %>
+    <img src="../img/GZHU.png" alt="">
     <div id="username">
         <%= username%>
     </div>
+    <header></header>
+    <div id="loginframe"></div>
 </body>
 </html>
