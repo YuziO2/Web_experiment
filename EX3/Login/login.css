@@ -41,7 +41,7 @@ header span {
     border-style: solid;
     background-color: whitesmoke;
     margin: 10% 45%;
-    padding: 10px 30px;
+    padding: 10px 0;
     text-align: center;
     user-select: none;
     z-index: 99;

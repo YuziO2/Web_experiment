@@ -31,10 +31,13 @@
     * * 如果有错误信息：显示错误信息
     */
     String msg = "";
+    String username="";
     if(session.getAttribute("msg") != null){
         // 有错误信息：显示错误信息:
         msg = (String)session.getAttribute("msg");
+        username = (String)session.getAttribute("username");
         out.print("<div id=\"message\" style=\"display:none\">"+msg+"</div>");
+        out.print("<div id=\"preusername\" style=\"display:none\">"+username+"</div>");
         session.removeAttribute("msg");
     }
     else{

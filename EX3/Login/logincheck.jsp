@@ -53,11 +53,15 @@ if(rs.next()){
     else{//密码错误
         out.print("密码错误！");
         session.setAttribute("msg","密码错误力！");
+        session.setAttribute("username",username);
         response.sendRedirect("login.jsp");
     }
 }
 else{//没有账号
     out.print("无此用户，请注册！");
+    session.setAttribute("msg","无此用户，请注册！");
+    session.setAttribute("username",username);
+    response.sendRedirect("login.jsp");
 }
 %>
 </div>
