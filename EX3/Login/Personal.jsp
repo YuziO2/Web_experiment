@@ -17,6 +17,7 @@
 
 <body>
     <%
+        //判断是否是第一次进入页面
         if(session.isNew()){//是的话，置status为未登录,并扔回登录界面
             session.setAttribute("status",0);
             session.setAttribute("msg","您还未登录！");

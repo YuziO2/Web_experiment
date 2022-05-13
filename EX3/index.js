@@ -21,6 +21,18 @@ $(() => {
         }
     }
 
+    let username = $("#username").text().trim();
+    $("#username").remove();
+    if (username == "") {//未登录
+        $("#account").css("width", "170px");
+        $(".unlogged").attr("style", "");
+    }
+    else {//已登录
+        $("#account").css("width", "170px");
+        $(".logged").text(username);
+        $(".logged").attr("style", "");
+    }
+
     $("#fontSizeSwitcher .fontSize:eq(0)").on("click", () => {//字体小
         $("#sliding_block").animate({ "left": "2%" }, 500);
         $("#intro h1").animate({ "font-size": "2em" }, 500);

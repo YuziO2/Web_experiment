@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +27,19 @@
         </div>
     </header>
     <div id="username">
-
+        <%
+            //判断是否是第一次进入页面
+            if(session.isNew()){//是的话，置status为未登录
+                session.setAttribute("status",0);
+            }
+            //判断是否已登录
+            if((int)session.getAttribute("status")==0){
+                //什么也不做，username置空
+            }
+            else{
+                out.print((String)session.getAttribute("username"));
+            }
+        %>
     </div>
     <div id="account">
         <button class="button button-glow button-border button-rounded button-caution unlogged" style="display:none"
