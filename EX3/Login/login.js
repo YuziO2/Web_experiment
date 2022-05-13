@@ -19,5 +19,9 @@ $(() => {
         if ($("#message").text() == "无此用户，请注册！") {
             setTimeout(() => { window.location.replace("register.jsp") }, 4000)
         }
+        if ($("#message").text() == "您已经登录了！") {
+            $("#login").attr("disabled", "true");
+            setTimeout(() => { window.location.replace("Personal.jsp") }, 4000)
+        }
     }
 })

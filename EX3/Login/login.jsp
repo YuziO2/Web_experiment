@@ -32,6 +32,14 @@
     */
     String msg = "";
     String username="";
+    //判断是否是第一次进入页面
+    if(session.isNew()){//是的话，置status为未登录
+        session.setAttribute("status",0);
+    }
+    //判断是否已登录
+    if((int)session.getAttribute("status")==1){
+        session.setAttribute("msg","您已经登录了！");
+    }
     if(session.getAttribute("msg") != null){
         // 有错误信息：显示错误信息:
         msg = (String)session.getAttribute("msg");

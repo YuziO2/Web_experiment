@@ -49,6 +49,9 @@ ResultSet rs = stmt.executeQuery(sql);
 if(rs.next()){
     if(rs.getString("password").equals(password)){//密码正确
         out.print("欢迎您！"+username);
+        session.setAttribute("status",1);
+        session.setAttribute("username",username);
+        response.sendRedirect("Personal.jsp");
     }
     else{//密码错误
         out.print("密码错误！");
