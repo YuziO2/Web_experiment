@@ -31,7 +31,7 @@ ResultSet rs = stmt.executeQuery(sql);
 <html>
 <head>
 <meta charset="utf-8">
-<title>菜鸟教程(runoob.com)</title>
+<title></title>
 </head>
 <body>
 <h1>使用 POST 方法读取数据</h1>

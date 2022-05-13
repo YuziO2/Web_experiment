@@ -31,7 +31,7 @@ ResultSet rs = stmt.executeQuery(sql);
 <html>
 <head>
 <meta charset="utf-8">
-<title>菜鸟教程(runoob.com)</title>
+<title></title>
 </head>
 <body>
 <h1>使用 POST 方法读取数据</h1>
@@ -47,12 +47,15 @@ ResultSet rs = stmt.executeQuery(sql);
 <div>
 <% 
 if(rs.next()){//已有账号，返回错误
-        session.setAttribute("msg","账号已存在，请登录！");
-        session.setAttribute("username",username);
-        response.sendRedirect("register.jsp");
+   session.setAttribute("msg","账号已存在，请登录！");
+   session.setAttribute("username",username);
+   response.sendRedirect("register.jsp");
 }
 else{//没有账号，注册
-    
+   stmt.executeUpdate("INSERT INTO `hongdb`.`users` (`username`, `password`) VALUES ('"+username+"', '"+password+"');");
+   session.setAttribute("msg","注册成功，请登录！");
+   session.setAttribute("username",username);
+   response.sendRedirect("login.jsp");
 }
 %>
 </div>
