@@ -47,10 +47,17 @@ ResultSet rs = stmt.executeQuery(sql);
 <div>
 <% 
 if(rs.next()){
-    out.print(rs.getString("password"));
+    if(rs.getString("password").equals(password)){//密码正确
+        out.print("欢迎您！"+username);
+    }
+    else{//密码错误
+        out.print("密码错误！");
+        session.setAttribute("msg","密码错误力！");
+        response.sendRedirect("login.jsp");
+    }
 }
-else{
-    out.print("无匹配");
+else{//没有账号
+    out.print("无此用户，请注册！");
 }
 %>
 </div>

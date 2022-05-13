@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="input.css">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="../import/buttons.css">
+    <script src="../import/jquery-3.6.0.js"></script>
+    <script src="login.js"></script>
     
 </head>
 
@@ -29,19 +31,24 @@
     * * 如果有错误信息：显示错误信息
     */
     String msg = "";
-    if(request.getAttribute("msg") != null){
+    if(session.getAttribute("msg") != null){
         // 有错误信息：显示错误信息:
-        msg = (String)request.getAttribute("msg");
+        msg = (String)session.getAttribute("msg");
+        out.print("<div id=\"message\" style=\"display:none\">"+msg+"</div>");
+        session.removeAttribute("msg");
+    }
+    else{
+        out.print("<div id=\"message\" style=\"display:none\">"+msg+"</div>");
     }
     %>
     <div id="loginframe">
         <form action="logincheck.jsp" method="POST">
             <div>
-                <input class="gate" id="username" name="username" type="text" placeholder="Enter username:" />
+                <input class="gate" id="username" name="username" type="text" placeholder="Enter username:" required/>
                 <label for="username">用户名</label>
             </div>
             <div>
-                <input class="gate" id="password" name="password" type="password" placeholder="Enter password,more than 8 characters:" />
+                <input class="gate" id="password" name="password" type="password" placeholder="Enter password,more than 8 characters:" required minlength="8"/>
                 <label for="password">密码</label>
             </div>
             <input type="submit" id="login" class="button button-glow button-border button-rounded button-caution" value="登 录">
