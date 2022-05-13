@@ -68,6 +68,22 @@ header .menu {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
+#account {
+    width: 300px;
+    position: relative;
+    margin: 20px 0 0 auto;
+}
+
+#account .unlogged {
+    width: 100px;
+    padding: 0;
+}
+
+#account .logged {
+    width: 100px;
+    padding: 0;
+}
+
 #fontSizeSwitcher {
     position: relative;
     margin-left: auto;
@@ -103,7 +119,7 @@ header .menu {
 .swiper {
     width: 70%;
     height: 600px;
-    margin-top: 40px;
+    margin-top: 20px;
     position: relative;
 }
 
