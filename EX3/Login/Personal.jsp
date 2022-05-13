@@ -12,7 +12,7 @@
     <title>个人主页</title>
     
     <script src="../import/jquery-3.6.0.js"></script>
-    <script src="Personcal.js"></script>
+    <script src="Personal.js"></script>
 </head>
 
 <body>
@@ -21,11 +21,13 @@
             session.setAttribute("status",0);
             session.setAttribute("msg","您还未登录！");
             response.sendRedirect("login.jsp");
+            return;
         }
         //判断是否已登录
         if((int)session.getAttribute("status")==0){
             session.setAttribute("msg","您还未登录！");
             response.sendRedirect("login.jsp");
+            return;
         }
         String username = new String((String)session.getAttribute("username"));
 

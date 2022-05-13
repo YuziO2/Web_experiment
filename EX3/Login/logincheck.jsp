@@ -52,6 +52,7 @@ if(rs.next()){
         session.setAttribute("status",1);
         session.setAttribute("username",username);
         response.sendRedirect("Personal.jsp");
+        return;
     }
     else{//密码错误
         out.print("密码错误！");
