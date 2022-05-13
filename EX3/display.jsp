@@ -42,12 +42,12 @@
         %>
     </div>
     <div id="account">
-        <button class="button button-glow button-border button-rounded button-caution unlogged" style="display:none"
+        <button class="button button-glow button-border button-rounded button-highlight unlogged" style="display:none"
             onclick="window.location.href='./Login/register.jsp'">注册</button>
-        <button class="button button-glow button-border button-rounded button-caution unlogged" style="display:none"
+        <button class="button button-glow button-border button-rounded button-highlight unlogged" style="display:none"
             onclick="window.location.href='./Login/login.jsp'">登录</button>
-        <button class="button button-glow button-border button-rounded button-caution logged" style="display:none"
-            onclick="window.location.href='./Login/login.jsp'"></button>
+        <button class="button button-glow button-border button-rounded button-highlight logged" style="display:none"
+            onclick="window.location.href='./Login/Personal.jsp'"></button>
     </div>
     <!-- Swiper -->
     <div class="swiper">
