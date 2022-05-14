@@ -72,5 +72,7 @@
             
         </form>
     </div>
+    <div id="backtomain"><button class="button button-glow button-border button-rounded button-primary"
+            onclick="window.location.href='../display.jsp'">返回首页</button></div>
 </body>
 </html>

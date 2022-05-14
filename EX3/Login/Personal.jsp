@@ -10,8 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人主页</title>
+    <link rel="stylesheet" href="../import/buttons.css">
     <link rel="stylesheet" href="Personal.css">
     <script src="../import/jquery-3.6.0.js"></script>
+    <script src="../import/jquery.color-2.2.0.min.js"></script>
     <script src="Personal.js"></script>
 </head>
 
@@ -34,10 +36,12 @@
 
     %>
     <img src="../img/GZHU.png" alt="">
-    <div id="username">
-        <%= username%>
-    </div>
+    <form action="logout.jsp">
+        <input type="submit" id="username" value="<%= username%>" />
+    </form>
     <header></header>
     <div id="loginframe"></div>
+    <div id="backtomain"><button class="button button-glow button-border button-rounded button-primary"
+            onclick="window.location.href='../display.jsp'">返回首页</button></div>
 </body>
 </html>

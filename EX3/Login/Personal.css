@@ -9,7 +9,7 @@ body {
 
 #username {
     height: 40px;
-    width: 70px;
+    width: 100px;
     position: relative;
     top: 25px;
     margin: 0 2% 0 auto;
@@ -17,7 +17,10 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background-color: aquamarine;
+    font: 20px sans-serif;
+    background-color: rgb(127, 255, 212);
+    border-color: black;
+    border-width: 2.3px;
 }
 
 body img {
@@ -45,4 +48,15 @@ header {
     border-radius: 15px;
     background-color: darkgoldenrod;
     display: flex;
+}
+
+#backtomain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backtomain button {
+    width: 250px;
+    letter-spacing: 10px;
 }
