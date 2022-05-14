@@ -14,7 +14,7 @@
     <title>红色长廊注册</title>
     <link rel="stylesheet" href="input.css">
     <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="../import/buttons.css">
+    <link rel="stylesheet" href="https://www.bootcss.com/p/buttons/css/buttons.css">
     <script src="../import/jquery-3.6.0.js"></script>
     <script src="register.js"></script>
     

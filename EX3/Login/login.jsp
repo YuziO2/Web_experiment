@@ -14,7 +14,7 @@
     <title>红色长廊登陆</title>
     <link rel="stylesheet" href="input.css">
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="../import/buttons.css">
+    <link rel="stylesheet" href="https://www.bootcss.com/p/buttons/css/buttons.css">
     <script src="../import/jquery-3.6.0.js"></script>
     <script src="login.js"></script>
     
