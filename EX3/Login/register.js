@@ -12,6 +12,10 @@ $(() => {
         if ($("#message").text() == "账号已存在，请登录！") {
             setTimeout(() => { window.location.replace("login.jsp") }, 4000)
         }
+        if ($("#message").text() == "您已经登录了！") {
+            $("#register").attr("disabled", "true");
+            setTimeout(() => { window.location.replace("Personal.jsp") }, 4000)
+        }
     }
 })
 
