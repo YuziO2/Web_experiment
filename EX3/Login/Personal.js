@@ -9,4 +9,9 @@ $(() => {
         $(this).val(username);
         $(this).animate({ backgroundColor: "rgb(127, 255, 212)", color: "black", borderColor: "black" }, 500);
     });
+    if ($("#message").text() != "") {//有消息
+        $("#message").slideDown(500, () => {
+            setTimeout(() => { $("#message").slideUp(500) }, 2000)
+        });
+    }
 })

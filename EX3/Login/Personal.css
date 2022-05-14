@@ -39,6 +39,21 @@ header {
     font: 2em sans-serif;
 }
 
+#message {
+    position: absolute;
+    width: 190px;
+    height: 50px;
+    border: 2px;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: whitesmoke;
+    margin: 10% 45%;
+    padding: 10px 0;
+    text-align: center;
+    user-select: none;
+    z-index: 99;
+}
+
 #loginframe {
     width: 700px;
     height: 500px;
@@ -48,6 +63,28 @@ header {
     border-radius: 15px;
     background-color: darkgoldenrod;
     display: flex;
+}
+
+#loginframe form {
+    width: 100%;
+}
+
+#loginframe form div {
+    width: 100%;
+    position: relative;
+}
+
+
+#loginframe form div input,
+#loginframe form div label {
+    margin: 70px 0 0 100px;
+}
+
+#loginframe form>input {
+    width: 200px;
+    position: relative;
+    display: block;
+    margin: 50px auto;
 }
 
 #backtomain {

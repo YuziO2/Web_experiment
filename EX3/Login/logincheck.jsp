@@ -51,6 +51,9 @@ if(rs.next()){
         out.print("欢迎您！"+username);
         session.setAttribute("status",1);
         session.setAttribute("username",username);
+        session.setAttribute("password",password);
+        session.setAttribute("name",rs.getString("name"));
+        session.setAttribute("age",rs.getString("age"));
         response.sendRedirect("Personal.jsp");
         return;
     }
