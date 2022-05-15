@@ -41,7 +41,7 @@
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
     Connection conn=DriverManager.getConnection(url); 
     Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY); 
-    String sql="SELECT * FROM "+tableName+" ORDER BY RAND() LIMIT 10"; 
+    String sql="SELECT * FROM "+tableName+" ORDER BY RAND() LIMIT 5"; 
     ResultSet rs = stmt.executeQuery(sql);
 
     BufferedWriter myWriter = new BufferedWriter (new OutputStreamWriter (new FileOutputStream (dynamicQuestion,true),"UTF-8"));
@@ -104,7 +104,7 @@
                 style="display:none" onclick="location.reload()">再&nbsp;&nbsp;次&nbsp;&nbsp;答&nbsp;&nbsp;题</button>
             <button id="back" class="button button-glow button-border button-rounded button-caution"
                 style="display:none"
-                onclick="window.location.href='./display.html'">返&nbsp;&nbsp;回&nbsp;&nbsp;首&nbsp;&nbsp;页</button>
+                onclick="window.location.href='../display.jsp'">返&nbsp;&nbsp;回&nbsp;&nbsp;首&nbsp;&nbsp;页</button>
         </span>
     </div>
 </body>
