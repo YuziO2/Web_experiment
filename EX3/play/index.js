@@ -1,10 +1,12 @@
+let maxQuestion = 0;
 $("#enter").on("click", () => {
     $("#center").animate({ "height": 700, "margin-top": 40 }, 1000);
     $("#question,ul").slideDown(1000);
     $("img").hide(1000);
     $("#head").text("请作答：");
     $("#head").animate({ "font-size": 25 }, 1000);
-    $.getJSON("./play/Question.json", (data) => {
+    $.getJSON("./dynamicQuestion.json", (data) => {
+        maxQuestion = data.length;
         $("#question").html(data[0].Question)
         $("label[for='radioA']").text("A." + data[0].A);
         $("label[for='radioB']").text("B." + data[0].B);
@@ -16,10 +18,9 @@ $("#enter").on("click", () => {
 })
 
 let currentQuestion = 0;
-const maxQuestion = 10;//data.length
 let currentAnswer = [];
 let userAnswer = [];
-$.getJSON("./play/Question.json", (data) => {
+$.getJSON("./dynamicQuestion.json", (data) => {
     for (let i = 0; i < data.length; i++) {
         currentAnswer.push(data[i].Answer);
     }
@@ -31,7 +32,7 @@ $("#submit").on("click", () => {
     userAnswer.push($("form").serialize()[$("form").serialize().length - 1]);//放入所选答案
     currentQuestion++;
     if (currentQuestion < maxQuestion) {//没到最后一题，展示下一题
-        $.getJSON("./play/Question.json", (data) => {
+        $.getJSON("./dynamicQuestion.json", (data) => {
             $("#question").html(data[currentQuestion].Question);
             $("label[for='radioA']").text("A." + data[currentQuestion].A);
             $("#radioA").prop("checked", false);//对于true和false应使用prop而非attr！！！
@@ -57,7 +58,7 @@ $("#submit").on("click", () => {
             $("#question").text("恭喜你！全部回答正确！但也要继续学习哦！");
         }
         else {
-            $("#question").text("本次一共回答正确了" + (10 - wrongQuestion.length) + "道题目");
+            $("#question").text("本次一共回答正确了" + (maxQuestion - wrongQuestion.length) + "道题目");
             $("#question").after("<span id=\"result\"></span>");
             wrongQuestion = wrongQuestion.join("题，第");
             $("#result").text("错题分别是：第" + wrongQuestion + "题，再接再厉！");
