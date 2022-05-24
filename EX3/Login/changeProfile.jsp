@@ -14,14 +14,14 @@
     //数据库信息
     String userName="root"; 
     //密码 
-    String userPasswd="yu130014"; 
+    String userPasswd=System.getenv("MYSQL_ROOT_PASSWORD"); 
     //数据库名 
     String dbName="hongdb"; 
     //表名 
     String tableName="users"; 
     //将数据库信息字符串连接成为一个完整的url
     
-    String url="jdbc:mysql://localhost/"+dbName+"?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&user="+userName+"&password="+userPasswd; 
+    String url="jdbc:mysql://database/"+dbName+"?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&user="+userName+"&password="+userPasswd; 
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
     Connection conn=DriverManager.getConnection(url); 
     Statement stmt = conn.createStatement(); 
