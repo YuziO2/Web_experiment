@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  web:
+    image: tomcat:jre8-temurin-focal
+    container_name: tomcat-web
+    hostname: tomcat-web
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/usr/local/tomcat/webapps
+    restart: unless-stopped
+    # 注意，为了使jdbc能够正常运行，请第一次启动容器后在终端中键入docker cp ./WEB-INF/lib/mysql-connector-java-8.0.29.jar Tomcat容器ID:/usr/local/tomcat/lib
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: 1919810
+  database:
+    image: mysql:8.0.29
+    container_name: mysql
+    hostname: mysql
+    ports:
+      - 3306:3306
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: 1919810
+    restart: unless-stopped

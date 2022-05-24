@@ -21,7 +21,7 @@
 </head>
 
 <%
-    File dynamicQuestion = new File(getServletContext().getRealPath("/")+"\\EX3\\play","dynamicQuestion.json");
+    File dynamicQuestion = new File(getServletContext().getRealPath("/")+"/play","dynamicQuestion.json");
     if(dynamicQuestion.exists())//如果原来存在，便删除
         dynamicQuestion.delete();
     dynamicQuestion.createNewFile();
@@ -31,13 +31,13 @@
     //数据库信息
     String userName="root"; 
     //密码 
-    String userPasswd="yu130014"; 
+    String userPasswd=System.getenv("MYSQL_ROOT_PASSWORD"); 
     //数据库名 
     String dbName="hongdb"; 
     //表名 
     String tableName="questions"; 
     //将数据库信息字符串连接成为一个完整的url
-    String url="jdbc:mysql://localhost/"+dbName+"?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&user="+userName+"&password="+userPasswd; 
+    String url="jdbc:mysql://database/"+dbName+"?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&user="+userName+"&password="+userPasswd; 
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
     Connection conn=DriverManager.getConnection(url); 
     Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY); 
