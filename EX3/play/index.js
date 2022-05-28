@@ -18,13 +18,16 @@ $("#enter").on("click", () => {
 })
 
 let currentQuestion = 0;
-let currentAnswer = [];
+let correctAnswer = [];
+let answerID = [];
 let userAnswer = [];
 $.getJSON("./dynamicQuestion.json", (data) => {
     for (let i = 0; i < data.length; i++) {
-        currentAnswer.push(data[i].Answer);
+        correctAnswer.push(data[i].Answer);
+        answerID.push(data[i].id);
     }
-    console.log(currentAnswer);
+    console.log(correctAnswer.join(","));
+    console.log(answerID.join(","));
 });
 
 $("#submit").on("click", () => {
@@ -50,8 +53,8 @@ $("#submit").on("click", () => {
         $("#refresh").show(1000);
         $("#back").show(1000);
         let wrongQuestion = [];
-        for (let i = 0; i <= currentAnswer.length - 1; i++) {
-            currentAnswer[i] == userAnswer[i] ? null : wrongQuestion.push(i + 1);//wrongQuestion中存的是题号！
+        for (let i = 0; i <= correctAnswer.length - 1; i++) {
+            correctAnswer[i] == userAnswer[i] ? null : wrongQuestion.push(i + 1);//wrongQuestion中存的是题号！
         }
         console.log(wrongQuestion);
         if (wrongQuestion.length == 0) {//全对
@@ -63,5 +66,20 @@ $("#submit").on("click", () => {
             wrongQuestion = wrongQuestion.join("题，第");
             $("#result").text("错题分别是：第" + wrongQuestion + "题，再接再厉！");
         }
+        let date = new Date();
+        $.ajax({
+            type: "POST",
+            url: "recordImport.jsp",
+            data: {
+                answerID: answerID.join(","),
+                userAnswer: userAnswer.join(","),
+                correctAnswer: correctAnswer.join(","),
+                date: date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+            }
+        })
     }
+})
+
+$("#recordlist").on("click", () => {
+    window.location.href = 'recordlist.jsp';
 })

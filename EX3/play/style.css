@@ -3,6 +3,22 @@ body {
     background-size: cover;
 }
 
+#recordlist {
+    height: 40px;
+    width: 100px;
+    position: relative;
+    top: 25px;
+    margin: 0 2% 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font: 20px sans-serif;
+    background-color: rgb(127, 255, 212);
+    border-color: black;
+    border-width: 2.3px;
+}
+
 #center {
     width: 900px;
     height: 500px;

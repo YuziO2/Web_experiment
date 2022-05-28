@@ -19,3 +19,18 @@ CREATE TABLE `hongdb`.`questions` (
   `answer` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
 ```
+## record
+```sql
+CREATE TABLE `hongdb`.`record` (
+  `username` VARCHAR(20) NULL,
+  `answerID` VARCHAR(45) NULL,
+  `userAnswer` VARCHAR(45) NULL,
+  `correctAnswer` VARCHAR(45) NULL,
+  `date` VARCHAR(45) NULL,
+  INDEX `fk_record_1_idx` (`username` ASC) VISIBLE,
+  CONSTRAINT `fk_record_1`
+    FOREIGN KEY (`username`)
+    REFERENCES `hongdb`.`users` (`username`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+```

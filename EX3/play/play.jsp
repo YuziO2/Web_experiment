@@ -21,6 +21,10 @@
 </head>
 
 <%
+    //判断是否是第一次进入页面
+    if(session.isNew()){//是的话，置status为未登录
+        session.setAttribute("status",0);
+    }
     File dynamicQuestion = new File(getServletContext().getRealPath("/")+"/play","dynamicQuestion.json");
     if(dynamicQuestion.exists())//如果原来存在，便删除
         dynamicQuestion.delete();
@@ -49,6 +53,7 @@
     int counter=1;
     while(rs.next()){
         myWriter.write("    {\n");
+        myWriter.write("        \"id\": \""+rs.getString("id")+"\",\n");
         myWriter.write("        \"Question\": \""+counter+"."+rs.getString("question")+"\",\n");
         myWriter.write("        \"A\": \""+rs.getString("A")+"\",\n");
         myWriter.write("        \"B\": \""+rs.getString("B")+"\",\n");
@@ -69,6 +74,7 @@
 %>
 
 <body>
+    <div id="recordlist">username</div>
     <div id="center">
         <span id="head">欢迎进入广大党史答题系统！</span>
         <div class="loginimg">
