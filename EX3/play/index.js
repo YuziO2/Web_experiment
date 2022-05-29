@@ -80,7 +80,11 @@ $("#submit").on("click", () => {
         })
     }
 })
-
-$("#recordlist").on("click", () => {
-    window.location.href = 'recordlist.jsp';
-})
+var username = $("#recordlist").val();
+$("#recordlist").hover(function () {//鼠标进入动画
+    $(this).val("答题记录");
+    $(this).animate({ backgroundColor: "rgb(141, 76, 231)", color: "white", borderColor: "red" }, 500);
+}, function () {//鼠标离开动画
+    $(this).val(username);
+    $(this).animate({ backgroundColor: "rgb(76, 218, 231);", color: "black", borderColor: "black" }, 500);
+});

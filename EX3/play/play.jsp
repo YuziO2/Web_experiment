@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>永远跟党走</title>
     <script src="../import/jquery-3.6.0.js"></script>
+    <script src="../import/jquery.color-2.2.0.min.js"></script>
     <script src="./index.js" defer></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://www.bootcss.com/p/buttons/css/buttons.css">
@@ -74,7 +75,13 @@
 %>
 
 <body>
-    <div id="recordlist">username</div>
+    <%
+    if((int)session.getAttribute("status")==1){//已登录，显示按钮
+        String username = new String((String)session.getAttribute("username"));
+        out.print("<form action=\"recordlist.jsp\" method=\"POST\"><input type=\"submit\" id=\"recordlist\" value="+username+" /></form>");
+    }
+    
+    %>
     <div id="center">
         <span id="head">欢迎进入广大党史答题系统！</span>
         <div class="loginimg">
