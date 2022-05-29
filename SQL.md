@@ -21,16 +21,14 @@ CREATE TABLE `hongdb`.`questions` (
 ```
 ## record
 ```sql
-CREATE TABLE `hongdb`.`record` (
-  `username` VARCHAR(20) NULL,
-  `answerID` VARCHAR(45) NULL,
-  `userAnswer` VARCHAR(45) NULL,
-  `correctAnswer` VARCHAR(45) NULL,
-  `date` VARCHAR(45) NULL,
-  INDEX `fk_record_1_idx` (`username` ASC) VISIBLE,
-  CONSTRAINT `fk_record_1`
-    FOREIGN KEY (`username`)
-    REFERENCES `hongdb`.`users` (`username`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE);
+CREATE TABLE `record` (
+  `username` varchar(20) DEFAULT NULL,
+  `answerID` varchar(45) DEFAULT NULL,
+  `userAnswer` varchar(45) DEFAULT NULL,
+  `correctAnswer` varchar(45) DEFAULT NULL,
+  `date` bigint NOT NULL,
+  PRIMARY KEY (`date`),
+  KEY `fk_record_1_idx` (`username`),
+  CONSTRAINT `fk_record_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
+)
 ```

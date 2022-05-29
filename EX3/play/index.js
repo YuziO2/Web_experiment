@@ -74,7 +74,8 @@ $("#submit").on("click", () => {
                 answerID: answerID.join(","),
                 userAnswer: userAnswer.join(","),
                 correctAnswer: correctAnswer.join(","),
-                date: date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+                // date: date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+                date: date.getTime()
             }
         })
     }
