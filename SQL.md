@@ -32,3 +32,11 @@ CREATE TABLE `record` (
   CONSTRAINT `fk_record_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
 )
 ```
+## articles
+```sql
+CREATE TABLE `hongdb`.`articles` (
+  `columns` INT NOT NULL,
+  `headline` VARCHAR(45) NOT NULL,
+  `body` VARCHAR(10000) NULL,
+  PRIMARY KEY (`headline`));
+```

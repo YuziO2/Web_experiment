@@ -157,18 +157,32 @@ header .menu {
     margin-bottom: 70px;
 }
 
-#intro h1 {
+#intro span {
     display: block;
     text-align: center;
-    /* font-size: 40px; */
+    font-size: 2em;
+    font-weight: bold;
     margin: 50px;
 }
 
-#intro p {
+#intro div * {
     margin-left: 15%;
     margin-right: 15%;
+}
+
+#intro div h1 {
+    font-size: 20px;
+}
+
+#intro div p {
     text-indent: 36px;
     font-size: 18px;
+}
+
+#intro div img {
+    position: relative;
+    width: 700px;
+    margin: auto;
 }
 
 footer {
