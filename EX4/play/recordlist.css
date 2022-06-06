@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('./Background.jpeg');
+    background-size: cover;
+}
+
+#username {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    top: 25px;
+    margin: 0 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font: 20px sans-serif;
+    background-color: rgb(76, 218, 231);
+    border-color: black;
+    border-width: 2.3px;
+}
+
+#frame {
+    height: 650px;
+    width: 900px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+#frame>span {
+    position: absolute;
+    top: -70px;
+    left: 40px;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+    color: rgb(206, 180, 11)
+}
+
+#list {
+    width: 95%;
+    height: 85%;
+    margin-top: 20px;
+    overflow: auto;
+    background-color: antiquewhite;
+}
+
+#list li {
+    width: 90%;
+    height: 60px;
+    position: relative;
+    margin: 20px auto 20px auto;
+    list-style: none;
+    border-radius: 7px;
+    background-color: rgb(255, 225, 127);
+    overflow: hidden;
+}
+
+#list li div:nth-child(1) {
+    /* "作答时间"项 */
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+
+#list li div:nth-child(2) {
+    /* 时间 */
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#list li div:nth-child(3) {
+    /* "正确数"项 */
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
+
+#list li div:nth-child(4) {
+    /* 正确数 */
+    font-size: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.questions {
+    font-size: 18px;
+    margin: 15px;
+}
+
+#backtomain {
+    width: 300px;
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+#backtomain button {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 10px;
+}

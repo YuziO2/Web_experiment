@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+header {
+    display: flex;
+    user-select: none;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
+header span {
+    width: 60%;
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 60px auto;
+}
+
+#message {
+    position: absolute;
+    width: 190px;
+    height: 50px;
+    border: 2px;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: whitesmoke;
+    margin: 10% 45%;
+    padding: 10px 0;
+    text-align: center;
+    user-select: none;
+    z-index: 99;
+}
+
+#loginframe {
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border: 4px;
+    border-style: solid;
+    border-radius: 15px;
+    background-color: darkgoldenrod;
+    display: flex;
+}
+
+form {
+    width: 100%;
+}
+
+#loginframe form div {
+    width: 100%;
+
+}
+
+#username,
+#password,
+#Re_password,
+#username+label {
+    margin: 70px 0 0 100px;
+}
+
+#password+label {
+    margin: 180px 100px;
+    padding-left: 33px;
+    padding-right: 0;
+}
+
+#Re_password+label {
+    margin: 290px 100px;
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+#register {
+    width: 250px;
+    margin: 80px 0 0 210px;
+}
+
+#login {
+    margin: 10px 0 0 255px;
+}
+
+#backtomain {
+    display: flex;
+    margin-top: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+#backtomain button {
+    width: 250px;
+    letter-spacing: 10px;
+}
